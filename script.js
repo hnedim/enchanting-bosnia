@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Carousel Scrolling Logic (Existing) ---
+    // --- Existing Carousel Scrolling Logic ---
     const destinationsScrollWrapper = document.querySelector('.destinations-scroll-wrapper');
     const leftArrow = document.querySelector('.left-arrow');
     const rightArrow = document.querySelector('.right-arrow');
@@ -60,23 +60,109 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', checkScrollArrows);
     }
 
-    // --- Go Back to Top Button Logic (New) ---
+    // --- Go Back to Top Button Logic ---
     const backToTopBtn = document.getElementById('backToTopBtn');
 
-    // When the user scrolls down 300px from the top of the document, show the button
     window.addEventListener('scroll', () => {
         if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            backToTopBtn.classList.add('show'); // Add 'show' class to make it visible
+            backToTopBtn.classList.add('show');
         } else {
-            backToTopBtn.classList.remove('show'); // Remove 'show' class to hide it
+            backToTopBtn.classList.remove('show');
         }
     });
 
-    // When the user clicks on the button, scroll to the top of the document
     backToTopBtn.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth' // Smooth scroll effect
+            behavior: 'smooth'
         });
     });
+
+    // --- Fade-in Animations for Page Elements (Existing) ---
+    const observerOptions = {
+        root: null, // viewport
+        rootMargin: '0px',
+        threshold: 0.1 // 10% of element must be visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                element.classList.add('is-visible');
+
+                if (element.classList.contains('services-section') || 
+                    element.classList.contains('explore-destinations-section') ||
+                    element.classList.contains('car-rentals-section') ||
+                    element.classList.contains('properties-for-rent-section')) {
+                    
+                    const cards = element.querySelectorAll('.service-card');
+                    cards.forEach((card, index) => {
+                        card.style.transitionDelay = `${index * 0.1}s`;
+                        card.classList.add('is-visible');
+                    });
+                }
+                
+                if (element.classList.contains('why-choose-us-section')) {
+                    const reasonItems = element.querySelectorAll('.reason-item');
+                    reasonItems.forEach((item, index) => {
+                        item.style.transitionDelay = `${index * 0.1}s`;
+                        item.classList.add('is-visible');
+                    });
+                }
+
+                observer.unobserve(element); 
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll(
+        '.hero-section, ' +
+        '.services-section, ' +
+        '.explore-destinations-section, ' +
+        '.car-rentals-section, ' +
+        '.properties-for-rent-section, ' +
+        '.why-choose-us-section, ' +
+        '.site-footer'
+    ).forEach(section => {
+        observer.observe(section);
+    });
+
+    const heroSection = document.querySelector('.hero-section');
+    if (heroSection) {
+        const rect = heroSection.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            heroSection.classList.add('is-visible');
+        }
+    }
+
+    // --- Mobile Navbar Toggle Logic (New) ---
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    const navLinks = document.querySelectorAll('.main-nav a'); // Get all nav links
+
+    if (mobileMenuToggle && mainNav) {
+        mobileMenuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('is-open');
+            mobileMenuToggle.classList.toggle('is-open'); // To animate hamburger icon
+            document.body.classList.toggle('no-scroll'); // Prevent scrolling body when menu is open
+        });
+
+        // Close menu when a link is clicked (for single-page navigation)
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('is-open')) {
+                    mainNav.classList.remove('is-open');
+                    mobileMenuToggle.classList.remove('is-open');
+                    document.body.classList.remove('no-scroll');
+                }
+            });
+        });
+    }
+
+    // Add a class to body to prevent scrolling when the menu is open
+    // (This CSS needs to be added to style.css)
+    // body.no-scroll {
+    //     overflow: hidden;
+    // }
 });
