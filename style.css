@@ -95,11 +95,24 @@ a:hover {
 }
 
 /* Section Titles (Common style for H2s) */
-.section-title {
-    text-align: center;
-    margin-bottom: var(--spacing-xl); /* Increased spacing for sections */
-    padding-top: var(--spacing-xl); /* Top padding for sections */
+.section-title h2{
+    text-align: left;
+    margin-bottom: var(--spacing-lg); /* Increased spacing for sections */
     color: var(--light-off-white);
+    font-size:32px;
+}
+
+.section-title{
+    display:flex;
+    flex-direction: column;
+}
+
+.section-title .section-title-h2{
+    font-weight:300;
+}
+
+.section-title .above-section-h4 {
+    font-size: var(--spacing-sm);
 }
 
 /* ========================================= */
@@ -265,6 +278,7 @@ background-color: var(--primary-dark-green);
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border:2px solid var(--accent-gold-orange);
 }
 
 .service-card:hover {
@@ -278,6 +292,10 @@ background-color: var(--primary-dark-green);
     object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+.location-card .card-image {
+    width: 275px;
+    height: 100%; /* Adjusted from 220px */
 }
 
 .service-card .card-content {
@@ -295,11 +313,8 @@ background-color: var(--primary-dark-green);
     margin-bottom: var(--spacing-sm);
 }
 
-.service-card .card-description {
-    font-size: 1rem; /* 16px - as per body text guide */
-    line-height: 1.5;
-    margin-bottom: var(--spacing-md); /* Adjusted from --spacing-lg */
-    flex-grow: 1;
+.location-card .card-title {
+    margin-bottom: 0;
 }
 
 .service-card .card-link {
@@ -315,7 +330,26 @@ background-color: var(--primary-dark-green);
     color: var(--dark-text-color); /* Link color change on hover */
 }
 
+.location-card .card-subtitle, .above-section-h4 {
+    text-transform: uppercase;
+    margin:0;
+    text-transform: uppercase;
+    font-family: var(--font-body);
+    font-weight:500;
+    color:var(--accent-gold-orange);
+}
 
+.location-card .card-description {
+    font-size:14px;
+}
+
+.location-card span {
+    font-weight: bold;
+}
+
+.location-card .card-content{
+    gap:var(--spacing-sm)
+}
 /* ========================================= */
 /* 4. Home Page Services Grid (using service-card) */
 /* ========================================= */
@@ -338,6 +372,7 @@ background-color: var(--primary-dark-green);
 /* ========================================= */
 .explore-destinations-section {
     padding-bottom: var(--spacing-xl);
+    padding-top:10rem
 }
 
 .destinations-carousel-container {
@@ -408,14 +443,19 @@ background-color: var(--primary-dark-green);
     display: flex; /* Use flexbox for horizontal layout */
     gap: var(--spacing-lg); /* Space between cards */
     justify-content: flex-start;
-    padding: 0 var(--spacing-md); /* Internal padding for cards relative to scroll area */
+    padding: var(--spacing-md); /* Internal padding for cards relative to scroll area */
 }
 
 .location-card {
+    flex-direction: row;
     /* Inherits most styles from .service-card */
     flex-shrink: 0; /* Prevent cards from shrinking */
-    width: 300px; /* Adjusted fixed width for horizontal scroll cards from 320px */
+    width: 600px; /* Adjusted fixed width for horizontal scroll cards from 320px */
     max-width: 90vw; /* Ensure it doesn't exceed viewport width on small screens */
+}
+
+.location-card img {
+    height:100%;
 }
 
 /* ========================================= */
@@ -434,14 +474,19 @@ background-color: var(--primary-dark-green);
     padding: 0 var(--spacing-md);
 }
 
-.rental-car-card .car-price {
-    font-size: 1.125rem; /* Adjusted from 1.25rem */
-    font-weight: 700;
-    color: var(--accent-gold-orange);
-    margin-top: var(--spacing-sm);
-    margin-bottom: var(--spacing-md);
-    display: block;
+.rental-car-card .card-content p{
+    margin-bottom: var(--spacing-xs);
 }
+
+.rental-cars-card .fuel-type, .transmission-type, .passengers-type {
+    font-size: var(--spacing-sm); /* 16px - as per body text guide */
+    line-height: 1.5;
+}
+.properties-for-rent-section img {
+    width:100%;
+}
+
+
 
 
 /* ========================================= */
@@ -463,6 +508,7 @@ background-color: var(--primary-dark-green);
     color: var(--dark-text-color);
     max-width: 848px;
     margin: 0 auto;
+    border:2px solid var(--accent-gold-orange);
 }
 
 .reason-item {
@@ -513,11 +559,12 @@ background-color: var(--primary-dark-green);
 .footer-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     padding-bottom: var(--spacing-md);
     border-bottom: 1px solid rgba(243, 243, 231, 0.1);
     margin-bottom: var(--spacing-md);
+    gap:var(--spacing-lg)
 }
 
 .footer-logo {
@@ -527,13 +574,10 @@ background-color: var(--primary-dark-green);
     font-size: 1.5rem; /* Adjusted from 1.8rem */
     font-weight: 700;
     color: var(--light-off-white);
-    margin-right: var(--spacing-lg);
-    margin-bottom: var(--spacing-md);
 }
 
 .footer-logo img {
-    width: 175px; /* Adjusted from 40px */
-    margin-right: var(--spacing-xs);
+    width: 300px; /* Adjusted from 40px */
 }
 
 .contact-info {
@@ -636,10 +680,7 @@ background-color: var(--primary-dark-green);
 
     .service-cards-grid,
     .rental-cars-grid,
-    .properties-for-rent-section .rental-properties-grid { /* Combined for consistency */
-        grid-template-columns: 1fr; /* Stack on smaller screens */
-        padding: 0 var(--spacing-md);
-    }
+    
     .service-card .card-content {
         padding: var(--spacing-md);
     }
@@ -696,9 +737,7 @@ background-color: var(--primary-dark-green);
     .service-card .card-title,
     .location-card .card-title,
     .rental-car-card .card-title,
-    .rental-property-card .card-title {
-        font-size: 1.2rem; /* Adjusted from 1.5rem */
-    }
+
     .destinations-grid {
         padding: 0 var(--spacing-xs);
     }
