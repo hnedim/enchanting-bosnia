@@ -44,6 +44,10 @@ body {
     font-size: 1rem; /* Base font size 16px as per Figma guide */
 }
 
+body.no-scroll {
+     overflow: hidden;
+}
+
 /* Container for centering content */
 .container {
     max-width: var(--container-max-width);
@@ -201,10 +205,14 @@ background-color: var(--primary-dark-green);
     justify-content: center;
     text-align: center;
     color: var(--light-off-white);
-    background:url('Frame\ 2.png');
+    background:url('../images/Frame\ 2.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+.hero-section.tourism-hero-section{
+    background:url('../images/20250512_1802_Bosnian\ Villas\ Panorama_simple_compose_01jv2kmr8zexps40jrtzc5cvcb\(1\)\(1\).png')
 }
 
 .hero-bg-overlay {
@@ -262,9 +270,7 @@ background-color: var(--primary-dark-green);
 .hero-section.home-hero-section { /* Add this class to your home page hero */
     background-image: url('path/to/home-hero-background-image.jpg');
 }
-.hero-section.tourism-hero-section { /* This is already on your tourism page hero */
-    background-image: url('assets/tourism-hero-bg.jpg');
-}
+
 
 
 /* ========================================= */
@@ -427,6 +433,8 @@ background-color: var(--primary-dark-green);
     padding-bottom: var(--spacing-sm);
     padding-left: 0;
     padding-right: 0;
+
+    scroll-snap-type: x mandatory;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -452,6 +460,7 @@ background-color: var(--primary-dark-green);
     flex-shrink: 0; /* Prevent cards from shrinking */
     width: 600px; /* Adjusted fixed width for horizontal scroll cards from 320px */
     max-width: 90vw; /* Ensure it doesn't exceed viewport width on small screens */
+    scroll-snap-align: start;
 }
 
 .location-card img {
@@ -636,10 +645,7 @@ background-color: var(--primary-dark-green);
     .hero-title { font-size: 3rem; } /* Adjusted from 4rem */
     .hero-subtitle { font-size: 1.3rem; } /* Adjusted from 1.6rem */
 
-    .service-cards-grid {
-        grid-template-columns: repeat(2, minmax(280px, 1fr)); /* Adjusted to better fit smaller screens */
-        gap: var(--spacing-md);
-    }
+
 }
 
 @media (max-width: 768px) {
@@ -650,10 +656,6 @@ background-color: var(--primary-dark-green);
     .header-content {
         flex-direction: column;
         align-items: center;
-    }
-
-    .main-nav {
-        margin-top: var(--spacing-sm);
     }
 
     .main-nav ul {
@@ -714,13 +716,25 @@ background-color: var(--primary-dark-green);
     .social-links {
         margin-top: var(--spacing-sm);
     }
+
+    .location-card {
+    flex-direction: column;
+    flex-shrink: 0;
+    width:85vw;
+    max-width: 90vw; /* Ensure it doesn't exceed viewport width on small screens */
+} 
+
+    .location-card .card-image{
+        width:100%;
+        height:40vh;
+    }
 }
 
 @media (max-width: 480px) {
     .container {
         padding: 0 var(--spacing-xs);
     }
-    .section-title {
+    .section-title, .section-title h2{
         font-size: 1.5rem; /* Adjusted from 1.8rem */
         margin-bottom: var(--spacing-lg);
     }
