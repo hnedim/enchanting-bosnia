@@ -302,7 +302,7 @@ background-color: var(--primary-dark-green);
 }
 .location-card .card-image {
     width: 275px;
-    height: 100%; /* Adjusted from 220px */
+    height:30vh;
 }
 
 .service-card .card-content {
@@ -333,6 +333,24 @@ background-color: var(--primary-dark-green);
     align-self: flex-start;
 }
 
+.service-card .card-button {
+    color: var(--light-off-white);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.750rem; /* Adjusted from 0.9rem */
+    letter-spacing: 0.5px;
+    align-self: flex-start;
+    border-radius:8px;
+    background-color: var(--accent-gold-orange);
+    padding:var(--spacing-xs) var(--spacing-sm);
+    border: 2px solid var(--accent-gold-orange);
+}
+
+.service-card .card-button:hover{
+    background-color: var(--light-off-white);
+    color: var(--accent-gold-orange);
+}
+
 .service-card .card-link:hover {
     color: var(--dark-text-color); /* Link color change on hover */
 }
@@ -346,16 +364,13 @@ background-color: var(--primary-dark-green);
     color:var(--accent-gold-orange);
 }
 
-.location-card .card-description {
-    font-size:0.9rem;
-}
-
 .location-card span {
     font-weight: bold;
 }
 
 .location-card .card-content{
-    gap:var(--spacing-sm)
+    gap:var(--spacing-sm);
+    max-width: 275px;
 }
 /* ========================================= */
 /* 4. Home Page Services Grid (using service-card) */
@@ -457,10 +472,8 @@ background-color: var(--primary-dark-green);
 }
 
 .location-card {
-    flex-direction: row;
-    /* Inherits most styles from .service-card */
+    flex-direction: column;
     flex-shrink: 0; /* Prevent cards from shrinking */
-    width: 600px; /* Adjusted fixed width for horizontal scroll cards from 320px */
     max-width: 90vw; /* Ensure it doesn't exceed viewport width on small screens */
     scroll-snap-align: start;
 }
@@ -723,14 +736,9 @@ background-color: var(--primary-dark-green);
     .location-card {
     flex-direction: column;
     flex-shrink: 0;
-    width:85vw;
-    max-width: 90vw; /* Ensure it doesn't exceed viewport width on small screens */
+    width:100%;
 } 
 
-    .location-card .card-image{
-        width:100%;
-        height:40vh;
-    }
 }
 
 @media (max-width: 480px) {
@@ -759,7 +767,7 @@ background-color: var(--primary-dark-green);
         padding: 0 var(--spacing-xs);
     }
     .location-card {
-        width: 250px; /* Adjusted from 260px */
+        width: 100%; /* Adjusted from 260px */
     }
 }
 
