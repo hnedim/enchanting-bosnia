@@ -109,6 +109,7 @@ a:hover {
 .section-title{
     display:flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .section-title .section-title-h2{
@@ -205,7 +206,7 @@ background-color: var(--primary-dark-green);
     justify-content: center;
     text-align: center;
     color: var(--light-off-white);
-    background:url('../images/Frame\ 2.png');
+    background:url('../images/index-background.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -346,7 +347,7 @@ background-color: var(--primary-dark-green);
 }
 
 .location-card .card-description {
-    font-size:14px;
+    font-size:0.9rem;
 }
 
 .location-card span {
@@ -361,6 +362,7 @@ background-color: var(--primary-dark-green);
 /* ========================================= */
 .services-section {
     padding-bottom: var(--spacing-xl);
+    padding-top:10rem;
 }
 
 .service-cards-grid {
@@ -471,6 +473,7 @@ background-color: var(--primary-dark-green);
 /* 6. Tourism Page - Car Rentals Section */
 /* ========================================= */
 .car-rentals-section {
+    padding-top: var(--spacing-xl);
     padding-bottom: var(--spacing-xl);
 }
 
