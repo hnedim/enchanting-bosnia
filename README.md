@@ -1,4 +1,3 @@
-```markdown
 # Enchanting Bosnia
 
 Enchanting Bosnia is a modern, responsive web presence designed to showcase the beauty, culture, and opportunities available in Bosnia and Herzegovina. It serves as a comprehensive platform offering various services to visitors and investors, with a particular focus on catering to Arabic-speaking clientele.
@@ -26,4 +25,3 @@ The website is built with a keen eye on user experience and visual appeal, utili
 The project is built using a combination of foundational web technologies: HTML5 for semantic structure, CSS3 for comprehensive styling and responsiveness (leveraging Flexbox, CSS Grid, and `scroll-snap-type`), and JavaScript (ES6+) for dynamic behaviors, animations (via `Intersection Observer API`), and content management (using `localStorage` for language persistence).
 
 Enchanting Bosnia aims to provide a welcoming and efficient online platform for anyone looking to engage with the vibrant country of Bosnia and Herzegovina.
-```
