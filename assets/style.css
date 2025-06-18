@@ -602,6 +602,281 @@ a:hover {
     background-position-y: -15rem;
 }
 
+/* --- Contact Page Specific Styles (for assets/style.css) --- */
+
+#contact-details-section{
+    margin-top:10rem;
+}
+
+
+.contact-page-section:last-of-type,
+.why-choose-us-section:last-of-type {
+    border-bottom: none; /* No border for the very last section on the page */
+}
+
+
+/* Common Section Introduction Paragraph Style */
+.section-intro-paragraph {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-xl); /* Centered with bottom margin */
+    font-size: 1.1rem;
+}
+
+/* --- Contact Info Grid --- */
+.contact-info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg); /* Spacing between grid items */
+    margin-bottom: var(--spacing-xl); /* Space before the form section */
+    justify-content: center;
+}
+
+.contact-info-item {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    display: flex; /* Flexbox for internal alignment */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+}
+
+.contact-info-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+
+.contact-info-item i {
+    margin-bottom: var(--spacing-md);
+    font-size: 3rem; /* Icon size */
+    /* Color is set inline in HTML: style="color:var(--accent-gold-orange);" */
+}
+
+.contact-info-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--accent-gold-orange); /* Highlight heading */
+}
+
+.contact-info-item p {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.contact-info-item a {
+    font-weight: 600; /* Make links bold */
+}
+
+.contact-info-item .card-link {
+    display: inline-block;
+    margin-top: var(--spacing-sm);
+    padding: 8px 15px;
+    background-color: var(--accent-gold-orange);
+    color: var(--text-color-light);
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-info-item .card-link:hover {
+    background-color: var(--button-hover-dark);
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem; /* Smaller titles on smaller screens */
+    }
+
+    .section-intro-paragraph {
+        font-size: 1rem;
+    }
+
+    .contact-info-grid,
+    .reasons-list {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+
+    .contact-info-item,
+    .reason-item,
+    .contact-form-container {
+        padding: var(--spacing-md); /* Reduced padding */
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .button {
+        font-size: 0.95rem; /* Slightly smaller text in form elements */
+    }
+
+    #backToTopBtn {
+        bottom: var(--spacing-md);
+        right: var(--spacing-md);
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+        line-height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-intro-paragraph {
+        margin-bottom: var(--spacing-lg);
+    }
+}
+
+/* --- FAQ Page Specific Styles --- */
+
+#faq-section{
+    margin-top:10rem;
+}
+
+.faq-categories {
+    margin-top: var(--spacing-xl);
+}
+
+.faq-category {
+    margin-bottom: var(--spacing-xl); /* Space between categories */
+}
+
+.category-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    color: var(--accent-gold-orange); /* Highlight category titles */
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+}
+
+.category-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 40px; /* Shorter underline for categories */
+    height: 2px;
+    background-color: var(--accent-gold-orange);
+    border-radius: 1px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm); /* Space between individual FAQ items */
+}
+
+.faq-item {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    overflow: hidden; /* Ensures rounded corners on children */
+}
+
+.faq-item details {
+    width: 100%;
+}
+
+.faq-item summary {
+    display: block; /* Ensures summary takes full width */
+    padding: var(--spacing-md);
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--dark-text-color);
+    cursor: pointer;
+    background-color: #f8f8f8; /* Light background for summary */
+    border-bottom: 1px solid var(--border-color); /* Separator */
+    position: relative;
+    user-select: none; /* Prevent text selection on click */
+    transition: background-color 0.3s ease;
+}
+
+.faq-item summary:hover {
+    background-color: #f0f0f0; /* Slightly darker on hover */
+}
+
+/* Custom arrow for summary (replaces default arrow) */
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+.faq-item summary::after {
+    content: '\25B6'; /* Right-pointing triangle for closed state */
+    position: absolute;
+    right: var(--spacing-md);
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.2s ease;
+    color: var(--accent-gold-orange);
+    font-size: 0.8em;
+}
+
+/* Rotate arrow when details is open */
+.faq-item details[open] summary::after {
+    transform: translateY(-50%) rotate(90deg); /* Down-pointing when open */
+}
+
+.faq-item p {
+    padding: var(--spacing-md);
+    padding-top: var(--spacing-sm); /* Slightly less top padding to flow from summary */
+    margin-bottom: 0; /* Remove default paragraph margin */
+    line-height: 1.5;
+    background-color: var(--background-light);
+}
+
+/* Adjust border for open details */
+.faq-item details[open] summary {
+    border-bottom-color: transparent; /* No border when open, as content flows */
+}
+
+/* --- Responsive Adjustments for FAQ Page --- */
+@media (max-width: 768px) {
+    .faq-category {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .category-title {
+        font-size: 1.8rem;
+    }
+
+    .faq-item summary {
+        font-size: 1rem;
+        padding: var(--spacing-sm);
+    }
+
+    .faq-item p {
+        padding: var(--spacing-sm);
+        padding-top: var(--spacing-xs);
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-title {
+        font-size: 1.5rem;
+    }
+
+    .faq-item summary {
+        padding: var(--spacing-xs);
+        font-size: 0.9rem;
+    }
+    .faq-item p {
+        padding: var(--spacing-xs);
+        font-size: 0.85rem;
+    }
+}
+
 
 /* ========================================= */
 /* 9. Footer (Reused on both pages) */
@@ -770,6 +1045,34 @@ a:hover {
     width:100%;
 } 
 
+.real-estate-content {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.real-estate-content img {
+    width:100%;
+}
+
+.real-estate-content .destinations-description{
+    width:100%;
+    gap:var(--spacing-sm);
+}
+
+.real-estate-section{
+        background:url('../images/20250512_1805_Bosnian\ Villa\ Getaways_simple_compose_01jv2ktyvgfr8stwcb1zv15h6d.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.sarajevo-location{
+        background:url('../images/street-6519389_1920.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: -15rem;
+}
+
 }
 
 @media (max-width: 480px) {
@@ -854,6 +1157,8 @@ a:hover {
         height: 45px;
         font-size: 1.3rem;
     }
+
+    
 }
 
 /* Add this to the end of your existing `style.css` file or integrate into relevant sections */
