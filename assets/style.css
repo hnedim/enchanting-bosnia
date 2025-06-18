@@ -100,7 +100,6 @@ a:hover {
 
 /* Section Titles (Common style for H2s) */
 .section-title h2{
-    text-align: left;
     margin-bottom: var(--spacing-lg); /* Increased spacing for sections */
     color: var(--light-off-white);
     font-size:32px;
@@ -124,10 +123,9 @@ a:hover {
 /* 1. Header (Site Header & Navigation) */
 /* ========================================= */
 .site-header {
-/*     background-color: rgba(6, 37, 37, 0.8); /* Semi-transparent dark green from your color palette */
-background-color: var(--primary-dark-green);
+    background-color: rgba(6, 37, 37, 0.95); /* Semi-transparent dark green from your color palette */
     padding: var(--spacing-sm) 0;
-    position: fixed;
+    position:fixed;
     width: 100%;
     z-index: 1000;
     top: 0;
@@ -178,20 +176,9 @@ background-color: var(--primary-dark-green);
     font-weight: 400;
 }
 
-.main-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: var(--accent-gold-orange);
-    left: 0;
-    bottom: 0;
-    transition: width 0.3s ease;
-}
-
-.main-nav a:hover::after,
-.main-nav a.active::after {
-    width: 100%;
+.main-nav a:hover,
+.main-nav a.active {
+    color:var(--accent-gold-orange);
 }
 
 
@@ -200,20 +187,22 @@ background-color: var(--primary-dark-green);
 /* ========================================= */
 .hero-section {
     position: relative;
-    height: 100vh;
+    margin-top:102px;
+    height:80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--light-off-white);
-    background:url('../images/index-background.png');
+    background:url('../images/waterfall-6403521_1920.jpg');
     background-size: cover;
-    background-position: center;
     background-attachment: fixed;
 }
 
 .hero-section.tourism-hero-section{
-    background:url('../images/20250512_1802_Bosnian\ Villas\ Panorama_simple_compose_01jv2kmr8zexps40jrtzc5cvcb\(1\)\(1\).png')
+    background:url('../images/20250512_1802_Bosnian\ Villas\ Panorama_simple_compose_01jv2kmr8zexps40jrtzc5cvcb\(1\)\(1\).png');
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .hero-bg-overlay {
@@ -489,7 +478,7 @@ background-color: var(--primary-dark-green);
 }
 
 .destinations-description p {
-    text-align: justify;
+    text-align: left;
     line-height: 1.7;
 }
 /* ========================================= */
@@ -539,7 +528,7 @@ background-color: var(--primary-dark-green);
     background-color: var(--light-off-white);
     border-radius: 10px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    padding: var(--spacing-xl);
+    padding: var(--spacing-md);
     color: var(--dark-text-color);
     max-width: 848px;
     margin: 0 auto;
@@ -583,11 +572,43 @@ background-color: var(--primary-dark-green);
 }
 
 /* ========================================= */
-/* 8. Footer (Reused on both pages) */
+/* 8. Real Estate section */
+/* ========================================= */
+
+.real-estate-content {
+    display:flex;
+    align-items: center;
+}
+
+.real-estate-content img {
+    width:100%;
+}
+
+.real-estate-content .destinations-description{
+    width:50%;
+    gap:var(--spacing-sm);
+}
+
+.real-estate-section{
+        background:url('../images/20250512_1805_Bosnian\ Villa\ Getaways_simple_compose_01jv2ktyvgfr8stwcb1zv15h6d.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.sarajevo-location{
+        background:url('../images/street-6519389_1920.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: -15rem;
+}
+
+
+/* ========================================= */
+/* 9. Footer (Reused on both pages) */
 /* ========================================= */
 .site-footer {
     background-color: var(--primary-dark-green);
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-lg) 0 var(--spacing-md);
     border-top: 1px solid rgba(243, 243, 231, 0.1);
 }
 
@@ -884,7 +905,7 @@ background-color: var(--primary-dark-green);
         left: 0;
         width: 100%;
         height: 100%; /* Full height overlay */
-        background-color: var(--primary-dark-green); /* Full dark background */
+        background-color: var(--primary-dark-green);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -913,10 +934,6 @@ background-color: var(--primary-dark-green);
     .main-nav a {
         padding: var(--spacing-sm);
         display: block; /* Make links full width for easier tapping */
-    }
-
-    .main-nav a::after {
-        content: none; /* Remove underline animation on mobile */
     }
 
     /* Adjust header content to align logo and toggle */
