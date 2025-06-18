@@ -87,10 +87,14 @@ a:hover {
     border: none;
     border-radius: 5px;
     font-weight: 600;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-whatsapp{
+    background-color: green;
+    color: var(--light-off-white);
 }
 
 .button:hover {
@@ -571,6 +575,11 @@ a:hover {
     padding-left: 45px;
 }
 
+.cta {
+    display: flex;
+    justify-content: center;
+    margin-block: var(--spacing-lg);
+}
 /* ========================================= */
 /* 8. Real Estate section */
 /* ========================================= */
