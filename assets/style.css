@@ -203,6 +203,10 @@ a:hover {
     background-attachment: fixed;
 }
 
+.hero-section-location {
+    height:50vh;
+}
+
 .hero-section.tourism-hero-section{
     background:url('../images/pocitelj-f.jpg');
     background-size: cover;
@@ -903,7 +907,19 @@ a:hover {
 
 /* Location Detail Page */
 
+.location-info {
+    display:Flex;
+    flex-wrap: wrap;
+    padding-block:var(--spacing-lg);
+}
 
+#where-to-stay, #places-to-visit {
+    width:50%;
+}
+
+#recommended-time {
+    margin-bottom:var(--spacing-xl);
+}
 
 /* ========================================= */
 /* 9. Footer (Reused on both pages) */
@@ -985,6 +1001,8 @@ a:hover {
     font-size: 0.8125rem; /* Adjusted from 0.85rem (13px) */
 }
 
+
+
 /* ========================================= */
 /* Media Queries for Responsiveness */
 /* ========================================= */
@@ -999,7 +1017,6 @@ a:hover {
 
 @media (max-width: 768px) {
     .site-header {
-        padding: var(--spacing-xs) 0;
         background-color: var(--primary-dark-green);
     }
 
@@ -1099,6 +1116,13 @@ a:hover {
     background-attachment: fixed;
     background-position-y: -15rem;
 }
+
+#where-to-stay, #places-to-visit {
+    width:100%;
+}
+
+
+
 
 }
 

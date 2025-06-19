@@ -27,121 +27,49 @@
             <nav class="main-nav" aria-label="Main Navigation">
                 <ul>
                     <li><a href="index.html" data-i18n="homeLink">Home</a></li>
-                    <li><a href="tourism.html" class="active" data-i18n="tourismLink">Tourism</a></li> <li><a href="real-estate.html" data-i18n="realEstateLink">Real Estate</a></li>
+                    <li><a href="tourism.html" data-i18n="tourismLink">Tourism</a></li>
+                    <li><a href="real-estate.html" data-i18n="realEstateLink">Real Estate</a></li>
+                    <li><a href="contact.html" data-i18n="contactLink">Contact</a></li>
                     <li><a href="faq.html" data-i18n="faqLink">FAQ</a></li>
-                    <li><a href="contact.html" data-i18n="contactLink">Contact Us</a></li>
                 </ul>
-                <div class="language-switcher">
-                    <select id="language-select" aria-label="Select language">
-                        <option value="en" selected>English</option>
-                        <option value="ar">العربية</option>
-                    </select>
-                </div>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero-section sarajevo-location">
+        <section class="hero-section hero-section-location sarajevo-location">
             <div class="hero-bg-overlay"></div>
             <div class="hero-content container">
                 <h1 class="location-title" data-i18n="sarajevoHeroTitle">Sarajevo</h1>
-                <p class="location-subtitle" data-i18n="sarajevoHeroSubtitle">The Heart of Bosnia, Where East Meets West</p>
+                <p class="location-subtitle above-section-h4" data-i18n="sarajevoHeroSubtitle">The Heart of Bosnia, Where East Meets West</p>
             </div>
         </section>
 
         <section id="overview" class="section-padded container">
-            <h2 class="section-title" data-i18n="sarajevoOverviewTitle">Discover Sarajevo</h2>
             <p class="section-intro-paragraph" data-i18n="sarajevoOverviewText">Sarajevo, the vibrant capital of Bosnia and Herzegovina, is a city where centuries of history intertwine with modern life. From the Ottoman charm of Baščaršija to Austro-Hungarian architecture, and surrounded by majestic mountains, Sarajevo offers a unique blend of cultures, cuisines, and captivating stories. It's a city that has risen from adversity, now bustling with cafes, artisan shops, and a resilient spirit.</p>
         </section>
 
+        <section class="container location-info">
         <section id="places-to-visit" class="section-padded container">
             <h2 class="section-title" data-i18n="placesToVisitTitle">Places to Visit in Sarajevo</h2>
-            <div class="places-grid">
-                <div class="place-card service-card">
-                    <img src="images/sarajevo_bascarsija.jpg" alt="Baščaršija old bazaar" class="place-image">
-                    <h3 class="place-name" data-i18n="bascarsijaTitle">Baščaršija (Old Bazaar)</h3>
-                    <p class="place-description" data-i18n="bascarsijaDesc">Step back in time in Sarajevo's charming Ottoman-era bazaar. Explore artisan shops, enjoy traditional Bosnian coffee, and sample local delicacies like ćevapi. Don't miss the Sebilj fountain.</p>
-                    <ul class="place-highlights">
-                        <li data-i18n="highlightSebilj">Sebilj Fountain</li>
-                        <li data-i18n="highlightCopperStreet">Copper Street</li>
-                        <li data-i18n="highlightGaziMosque">Gazi Husrev-beg Mosque</li>
-                    </ul>
-                </div>
-
-                <div class="place-card service-card">
-                    <img src="images/sarajevo_vrelobosne.jpg" alt="Vrelo Bosne natural park" class="place-image">
-                    <h3 class="place-name" data-i18n="vreloBosneTitle">Vrelo Bosne (Springs of River Bosna)</h3>
-                    <p class="place-description" data-i18n="vreloBosneDesc">A serene natural park at the foot of Mount Igman, known for its picturesque walking paths, crystal-clear springs, and lush greenery. Perfect for a relaxing escape from the city.</p>
-                     <ul class="place-highlights">
-                        <li data-i18n="highlightNatureWalks">Nature Walks</li>
-                        <li data-i18n="highlightSprings">Natural Springs</li>
-                        <li data-i18n="highlightHorseCarriage">Horse-drawn Carriages</li>
-                    </ul>
-                </div>
-
-                <div class="place-card service-card">
-                    <img src="images/sarajevo_bjelasnica.jpg" alt="Bjelasnica mountain winter view" class="place-image">
-                    <h3 class="place-name" data-i18n="bjelasnicaTitle">Bjelašnica and Igman Mountains</h3>
-                    <p class="place-description" data-i18n="bjelasnicaDesc">Host of the 1984 Winter Olympics, these mountains offer stunning scenery, hiking trails, and skiing opportunities. Ideal for adventure seekers and nature lovers, accessible year-round.</p>
-                     <ul class="place-highlights">
-                        <li data-i18n="highlightSkiing">Skiing & Snowboarding (winter)</li>
-                        <li data-i18n="highlightHiking">Hiking & Mountain Biking (summer)</li>
-                        <li data-i18n="highlightOlympicSites">Olympic Sites</li>
-                    </ul>
-                </div>
-
-                <div class="place-card service-card">
-                    <img src="images/sarajevo_tunnel.jpg" alt="Sarajevo Tunnel of Hope" class="place-image">
-                    <h3 class="place-name" data-i18n="tunnelOfHopeTitle">Sarajevo Tunnel of Hope</h3>
-                    <p class="place-description" data-i18n="tunnelOfHopeDesc">A profound historical site, this underground tunnel was vital during the siege of Sarajevo. It offers a poignant look into the city's recent past and the resilience of its people.</p>
-                     <ul class="place-highlights">
-                        <li data-i18n="highlightHistoricalSignificance">Historical Significance</li>
-                        <li data-i18n="highlightMuseum">Museum Exhibits</li>
-                        <li data-i18n="highlightResilience">Symbol of Resilience</li>
-                    </ul>
-                </div>
-
-                <div class="place-card service-card">
-                    <img src="images/sarajevo_latin_bridge.jpg" alt="Latin Bridge and Gazi Husrev-beg Mosque" class="place-image">
-                    <h3 class="place-name" data-i18n="latinBridgeTitle">Latin Bridge & Emperor's Mosque</h3>
-                    <p class="place-description" data-i18n="latinBridgeDesc">Explore the iconic Latin Bridge, near the spot where Archduke Franz Ferdinand was assassinated, sparking WWI. Nearby, the grand Emperor's Mosque stands as a testament to Ottoman architecture.</p>
-                     <ul class="place-highlights">
-                        <li data-i18n="highlightWWIHistory">WWI History</li>
-                        <li data-i18n="highlightOttomanArch">Ottoman Architecture</li>
-                        <li data-i18n="highlightRiversideWalks">Riverside Walks</li>
-                    </ul>
-                </div>
-
-            </div>
+            <ul class="section-list">
+                <li>Baščaršija/Old Town</li>
+                <li>Bjelašnica Mountain</li>
+                <li>Vrelo Bosne</li>
+            </ul>
         </section>
 
         <section id="where-to-stay" class="section-padded container bg-light-gray">
             <h2 class="section-title" data-i18n="whereToStayTitle">Where to Stay in Sarajevo</h2>
             <p class="section-intro-paragraph" data-i18n="whereToStayIntro">Sarajevo offers a range of accommodation options to suit every preference, from luxury hotels to cozy boutique stays and authentic traditional guesthouses. Enchanting Bosnia can help you find the perfect place.</p>
             <div class="accommodation-options">
-                <div class="option-item">
-                    <h3 data-i18n="oldTownHotelsTitle">Old Town (Baščaršija) Hotels</h3>
-                    <p data-i18n="oldTownHotelsDesc">Stay in the heart of history, surrounded by charming streets, artisan shops, and traditional restaurants. Perfect for immersing yourself in the local culture.</p>
-                </div>
-                <div class="option-item">
-                    <h3 data-i18n="cityCenterHotelsTitle">City Center & Marijin Dvor</h3>
-                    <p data-i18n="cityCenterHotelsDesc">For a more modern experience with easy access to shopping malls, business centers, and contemporary cafes. Offers a blend of history and urban convenience.</p>
-                </div>
-                <div class="option-item">
-                    <h3 data-i18n="ilidzaResortsTitle">Ilidža Area Resorts</h3>
-                    <p data-i18n="ilidzaResortsDesc">Ideal for those seeking tranquility and greenery, especially near Vrelo Bosne. Features spa resorts and family-friendly accommodations, often with beautiful gardens.</p>
-                </div>
-                <div class="option-item">
-                    <h3 data-i18n="mountainChaletsTitle">Mountain Chalets & Hotels</h3>
-                    <p data-i18n="mountainChaletsDesc">For nature lovers and adventure enthusiasts, especially during winter for skiing or summer for hiking. Offers stunning views and a peaceful retreat.</p>
-                </div>
+                
             </div>
         </section>
-
+        </section>
         <section id="recommended-time" class="section-padded container">
             <h2 class="section-title" data-i18n="recommendedTimeTitle">Recommended Time to Spend</h2>
-            <div class="time-guidance-card service-card">
+            <div class="time-guidance-card">
                 <p data-i18n="recommendedTimeText">For a comprehensive experience of Sarajevo's main attractions, history, and local atmosphere, we recommend spending **3 to 5 days** in the city. This allows ample time to:</p>
                 <ul class="check-list">
                     <li data-i18n="timeHighlight1">Explore Baščaršija thoroughly.</li>
@@ -154,45 +82,12 @@
             </div>
         </section>
 
-        <section id="photo-gallery" class="section-padded container bg-light-gray">
-            <h2 class="section-title" data-i18n="galleryTitle">Sarajevo Photo Gallery</h2>
-            <div class="gallery-grid">
-                <figure class="gallery-item">
-                    <img src="images/gallery/sarajevo_1.jpg" alt="Sarajevo Old Town panorama" loading="lazy">
-                    <figcaption data-i18n="galleryCaption1">Panoramic view of Baščaršija</figcaption>
-                </figure>
-                <figure class="gallery-item">
-                    <img src="images/gallery/sarajevo_2.jpg" alt="Sebilj fountain in Sarajevo" loading="lazy">
-                    <figcaption data-i18n="galleryCaption2">The iconic Sebilj fountain</figcaption>
-                </figure>
-                <figure class="gallery-item">
-                    <img src="images/gallery/sarajevo_3.jpg" alt="Sarajevo street with trams" loading="lazy">
-                    <figcaption data-i18n="galleryCaption3">Trams passing through city center</figcaption>
-                </figure>
-                <figure class="gallery-item">
-                    <img src="images/gallery/sarajevo_4.jpg" alt="Sunset over Sarajevo" loading="lazy">
-                    <figcaption data-i18n="galleryCaption4">Breathtaking sunset from Yellow Fortress</figcaption>
-                </figure>
-                <figure class="gallery-item">
-                    <img src="images/gallery/sarajevo_5.jpg" alt="Sarajevo cuisine Cevapi" loading="lazy">
-                    <figcaption data-i18n="galleryCaption5">Delicious local Ćevapi</figcaption>
-                </figure>
-                <figure class="gallery-item">
-                    <img src="images/gallery/sarajevo_6.jpg" alt="Winter view of Bjelasnica mountain" loading="lazy">
-                    <figcaption data-i18n="galleryCaption6">Winter wonderland on Bjelašnica</figcaption>
-                </figure>
-            </div>
-            <div class="text-center" style="margin-top: var(--spacing-xl);">
-                 <a href="contact.html" class="button" data-i18n="bookSarajevoTourCta">Plan Your Sarajevo Adventure!</a>
-            </div>
-        </section>
-
     </main>
 
     <footer class="site-footer">
         <div class="container footer-content">
             <div class="footer-logo">
-                <img src="images/Logo (5).png" data-i18n-alt="logoAlt" alt="Enchanting Bosnia Footer Logo">
+                <img src="images/AjdinLogo (1).svg" data-i18n-alt="logoAlt" alt="Enchanting Bosnia Footer Logo">
             </div>
             <div class="contact-info">
                 <h4 data-i18n="footerContactUs">Contact Us</h4>

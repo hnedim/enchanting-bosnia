@@ -160,9 +160,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Add a class to body to prevent scrolling when the menu is open
-    // (This CSS needs to be added to style.css)
-    // body.no-scroll {
-    //     overflow: hidden;
-    // }
+    
 });
