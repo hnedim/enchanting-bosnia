@@ -198,13 +198,13 @@ a:hover {
     justify-content: center;
     text-align: center;
     color: var(--light-off-white);
-    background:url('../images/waterfall-6403521_1920.jpg');
+    background:url('../images/waterfall-f.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
 
 .hero-section.tourism-hero-section{
-    background:url('../images/20250512_1802_Bosnian\ Villas\ Panorama_simple_compose_01jv2kmr8zexps40jrtzc5cvcb\(1\)\(1\).png');
+    background:url('../images/pocitelj-f.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -226,14 +226,14 @@ a:hover {
 }
 
 .hero-title {
-    font-size: 3.4375rem; /* 55px */
-    margin-bottom: var(--spacing-md);
+    font-size: 3.25rem;
+    margin-bottom: var(--spacing-sm);
     letter-spacing: 1px;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
 .hero-subtitle {
-    font-size: 1.5rem; /* 24px */
+    font-size: 1.25rem; /* 24px */
     margin-bottom: var(--spacing-lg);
     font-weight: 400;
     text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
@@ -279,6 +279,8 @@ a:hover {
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border:2px solid var(--accent-gold-orange);
+    max-width:400px;
+    margin-block: var(--spacing-xs);
 }
 
 .service-card:hover {
@@ -294,7 +296,7 @@ a:hover {
     border-top-right-radius: 10px;
 }
 .location-card .card-image {
-    width: 275px;
+    width: 315px;
     height:30vh;
 }
 
@@ -318,12 +320,16 @@ a:hover {
 }
 
 .service-card .card-link {
-    color: var(--accent-gold-orange);
+    color: var(--light-off-white);
     font-weight: 700;
     text-transform: uppercase;
     font-size: 0.875rem; /* Adjusted from 0.9rem */
     letter-spacing: 0.5px;
     align-self: flex-start;
+    background-color: var(--accent-gold-orange);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
 }
 
 .service-card .card-button {
@@ -365,6 +371,15 @@ a:hover {
     gap:var(--spacing-sm);
     max-width: 275px;
 }
+
+/* Add to assets/style.css */
+.section-note {
+    font-size: 0.75rem;
+    text-align: center;
+    margin-top: rem; /* Pull it closer to the section intro */
+    margin-bottom: 2rem; /* Add space below before content starts */
+    font-style: italic;
+}
 /* ========================================= */
 /* 4. Home Page Services Grid (using service-card) */
 /* ========================================= */
@@ -374,8 +389,8 @@ a:hover {
 }
 
 .service-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 400px)); /* Adjusted from 380px to allow more flexibility */
+    display: flex;
+    flex-wrap: wrap;
     gap: var(--spacing-md);
     justify-content: center;
     align-items: stretch;
@@ -886,6 +901,9 @@ a:hover {
     }
 }
 
+/* Location Detail Page */
+
+
 
 /* ========================================= */
 /* 9. Footer (Reused on both pages) */
@@ -982,6 +1000,7 @@ a:hover {
 @media (max-width: 768px) {
     .site-header {
         padding: var(--spacing-xs) 0;
+        background-color: var(--primary-dark-green);
     }
 
     .header-content {
@@ -1051,7 +1070,6 @@ a:hover {
     .location-card {
     flex-direction: column;
     flex-shrink: 0;
-    width:100%;
 } 
 
 .real-estate-content {
@@ -1111,6 +1129,9 @@ a:hover {
     }
     .location-card {
         width: 100%; /* Adjusted from 260px */
+    }
+    .location-card .card-image{
+        width:100%;
     }
 }
 
